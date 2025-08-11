@@ -289,8 +289,10 @@ def generate_page(from_path, template_path, dest_path, basepath):
         template_content = f.read()
     html_content = markdown_to_html_node(markdown_content).to_html()
     title = extract_title(markdown_content)
-    html_page = template_content.replace("{{ Title }}", title).replace('href="/', f'href="{basepath}').replace('src="/', f'src="{basepath}')
-    html_page = html_page.replace("{{ Content }}", html_content).replace('href="/', f'href="{basepath}').replace('src="/', f'src="{basepath}')
+    html_page = template_content.replace("{{ Title }}", title)
+    html_page = html_page.replace("{{ Content }}", html_content)
+    html_page = html_page.replace('href="/', f'href="{basepath}')
+    html_page = html_page.replace('src="/', f'src="{basepath}')
     os.makedirs(os.path.dirname(dest_path), exist_ok=True)
     with open(dest_path, 'w', encoding='utf-8') as f:
         f.write(html_page)
