@@ -1,1 +1,2 @@
-python3 src/main.py "/Static-Site-Generator/"
+#!/bin/bash
+python src/main.py /Static-Site-Generator/
