@@ -41,21 +41,24 @@ This project was developed as part of my learning journey on [boot.dev](https://
 ## Installation & Usage
 
 1. Clone the repo:
+
    ```bash
    git clone https://github.com/TMalik26/Static-Site-Generator.git
    cd Static-Site-Generator
    ```
-2. Make sure you have Python 3 installed.
-3. Place your Markdown files in the content/ folder.
-4. Place any images or static assets in the static/ folder.
-5. Run the project:
+3. Make sure you have Python 3 installed.
+4. Place your Markdown files in the content/ folder.
+5. Place any images or static assets in the static/ folder.
+6. Run the project:
+
    ```bash
   python main.py
   # or
   python3 main.py
    ```
-6. To view the generated site, open the docs/ folder. You can simply open docs/index.html in your browser. Or, for a better experience, start a local server:
-   ```bash
+7. To view the generated site, open the docs/ folder. You can simply open docs/index.html in your browser. Or, for a better experience, start a local server:
+
+```bash
    cd docs
    python -m http.server 8000
    # or
